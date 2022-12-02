@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Login Page</title>
+    <script type="text/javascript">
+        function validate()
+        {
+            if(document.login.uname.value=="")
+            {
+                alert("Username cannot be empty");
+                document.login.uname.focus();
+            }
+            else if(document.login.pwd.value.length=="")
+            {
+                alert("Password cannot be empty");
+                document.login.pwd.focus();
+            }
+            else if(document.login.uname.value=="reva" && document.login.pwd.value=="123")
+            {
+                alert("Login Successful");
+                document.login.action="arithjs.html";
+            }
+            else
+            {
+                alert("Invalid Login");
+                document.login.uname.value="";
+                document.login.pwd.value="";
+                document.login.uname.focus();
+            }
+        }
+    </script>
+</head>
+<body bgcolor="white">
+    <form name="login">
+        <table align="center" bgcolor="green" style="text-align:center;">
+            <tr><th colspan="2">LOGIN PAGE</th></tr>
+            <tr><td>USERNAME</td><td><input type="text" name="uname" autofocus="autofocus"/></td></tr>
+            <tr><td>PASSWORD</td><td><input type="Password" name="pwd"/></td></tr>
+            <tr><td><input type="button" value="LOGIN" onclick="validate()"/></td>
+            <td><input type="reset" value="CLEAR"/></td></tr>
+        </table>
+    </form>
+</body>
+</html>

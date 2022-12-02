@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Calculator</title>
+    <script type="text/javascript">
+        function add()
+        {
+            var a,b,c;
+            a=parseInt(document.frm.num1.value);
+            b=parseInt(document.frm.num2.value);
+            c=a+b;
+            document.frm.result.value=c;
+        }
+        function sub()
+        {
+            var a,b,c;
+            a=parseInt(document.frm.num1.value);
+            b=parseInt(document.frm.num2.value);
+            c=a-b;
+            document.frm.result.value=c;
+        }
+        function mul()
+        {
+            var a,b,c;
+            a=parseInt(document.frm.num1.value);
+            b=parseInt(document.frm.num2.value);
+            c=a*b;
+            document.frm.result.value=c;
+        }
+        function div()
+        {
+            var a,b,c;
+            a=parseInt(document.frm.num1.value);
+            b=parseInt(document.frm.num2.value);
+            if(b!=0)
+            {
+                c=a/b;
+            }
+            else
+            {
+                c="Divide by zero error";
+            }
+            document.frm.result.value=c;
+        }
+    </script>
+</head>
+<body bgcolor="lightblue">
+    <center>
+        <form name="frm" action="#">
+            <font face="arial" size="5">
+                <fieldset style="width:500px;text-align:left;">
+                <legend>ARTITHMETIC OPERATION</legend>
+                    Enter First Number :<input type="text" name="num1" required="reqiored"/><br><br>
+                    Enter Second Number :<input type="text" name="num2" required="reqiored"/><br><br>
+                    Result :<input type="text" name="result" readonly="readonly"/><br><br>
+                    <input type="button" value="+" onclick="add()"/>
+                    <input type="button" value="-" onclick="sub()"/>
+                    <input type="button" value="*" onclick="mul()"/>
+                    <input type="button" value="/" onclick="div()"/>
+                </fieldset>
+            </font>
+        </form>
+    </center>
+</body>
+</html>

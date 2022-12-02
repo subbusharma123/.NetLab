@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Student Form</title>
+    <Script type="text/javascript">
+        function count()
+        { 
+            alert("The number of controls used in this form= "+document.Student.length);
+        }
+    </Script>
+</head>
+<body>
+    <form name="Student">
+        <h1>REGISTRATION FORM</h1>
+        <form action="" method="post">
+            <p>
+                <label>Enter your e-mail ID :<input type="text" name="myname" size="24" maxlength="25"></label>
+            </p>
+            <p>
+                <label>Enter your Password :<input type="password" name="mypassword" size="20" maxlength="20"></label>
+            </p>
+            <p>Gender</p>
+            <p>
+                <label><input type="radio" name="act" value="one">Male</label>
+                <label><input type="radio" name="act" value="two">Female</label>
+            </p>
+            <p>Which of the following accounts do you have?</p>
+            <p>
+                <label><input type="checkbox" name="act" value="one">Gmail</label>
+                <label><input type="checkbox" name="act" value="two">Facebook</label>
+                <label><input type="checkbox" name="act" value="three">Twitter</label>
+                <label><input type="checkbox" name="act" value="four">Google</label>
+            </p>
+            <p>REVA University Branches</p>
+            <select name="branches">
+                <option>Information Science</option>
+                <option>Computer Science</option>
+                <option>Electronics</option>
+                <option>Electrical</option>
+                <option>Mechanical</option>
+            </select>
+            <p>
+                <p>Any Suggestions?</p>
+                <p><textarea name="feedback" rows="5" cols="100"></textarea></p>
+            </p>
+            <p>Click on submit if you want to register</p>
+            <p><input type="submit" value="SUBMIT" onclick=""/>
+            <input type="reset" value="RESET"/>
+            <input type="button" value="COUNT" onclick="count()"></p>
+        </form>
+    </form>
+</body>
+</html>
